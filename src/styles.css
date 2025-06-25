@@ -1,100 +1,103 @@
+:root {
+  --font-main: 'Poppins', sans-serif;
+  --color-main: #EDBDAC;
+  --color-text: #222;
+  --color-accent: #ffe4db;
+  --border-radius: 1.25rem;
+}
+/* style main area of project*/
 body {
-  background-color: azure;
+  background-color: #fff;
   text-align: center;
-  color: white;
+  color: var(--color-text);
+  font-family: var(--font-main);
   height: 100vh;
 }
-
-h2 {
-  padding-top: 40px;
-  font-size: 32px;
-  color: black;
-}
-#button {
-  background-color: #fae3b0;
-  color: black;
-  border-radius: 25px;
-  left: 50%;
-  border: solid 1px gray;
-  padding: 10px;
-  margin: 40px;
-  width: auto;
-  font-size: 18px;
-}
-
 main {
-  background-color: #ffffff;
-  margin: 80px auto;
-  border: solid 1px gray;
-  padding: 15px;
-  border-radius: 25px;
-  width: 700px;
+  background-color: var(--color-accent);
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
-h6 {
-  margin: 0;
-  font-family: "Caveat";
-  text-align: center;
-  font-size: 16px;
+/* title */
+h1 {
+  padding-top: 2.5rem;
+  font-size: 2rem;
+  color: var(--color-text);
 }
-#cuisine {
-  margin-bottom: 7px;
-  font-size: 18px;
+/*search field*/
+input {
+  width: 70%;
+  padding: 0.625rem;
+  margin: 1.25rem;
+  font-size: 1rem;
+  border: solid 1px #ccc;
+  border-radius: var(--border-radius)
+}
+/*submit button to start search*/
+#button {
+  background-color: var(--color-main);
+  color:var(--color-text);
+  border-radius: var(--border-radius);
+  border: none;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  margin: 2.5rem;
+}
+#button:hover{
+  transform: scale(1.05);
 }
 
+/*loader styling*/
+#loading {
+  font-style: italic;
+  font-size: 0.75rem;  
+}
+/*space where recipe will be displayed*/
+#recipespot {
+  margin: 1.875rem;
+  padding: 0.625rem;
+  line-height: 2;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: black;
+}
+/* my name and links for project*/
 footer {
   opacity: 0.7;
   bottom: 0;
   width: 100%;
   margin: auto 0;
-  font-size: 24px;
+  padding-bottom: 2rem;
+  font-size: 0.875rem;
   color: black;
 }
 
-input {
-  width: 500px;
-  padding: 10px;
-  margin: 20px;
-  border-radius: 7px;
-  border: solid 1px grey;
-}
-#recipespot {
-  margin: 30px;
-  padding: 10px;
-  line-height: 2;
-  font-size: 28px;
-  font-weight: 700;
-  color: black;
-}
-@media screen and (max-width: 600px) {
-  h2 {
-    padding-top: 20px;
-    font-size: 21px;
-  }
-  #button {
-    padding: 20px;
-    margin: 40px;
-    font-size: 18px;
-  }
 
+
+@media (max-width: 600px) {
   main {
-    margin: 80px auto;
-    width: 400px;
-  }
-  h6 {
-    font-size: 12px;
-  }
-  #cuisine {
-    font-size: 14px;
+    margin: 2rem auto;
+    padding: 1rem;
   }
 
-  footer {
-    font-size: 14px;
+  h1 {
+    font-size: 1.5rem;
   }
 
-  input {
-    width: 300px;
-  }
   #recipespot {
-    font-size: 18px;
+    font-size: 0.9rem;
   }
+
+  #button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  footer {
+    font-size: 0.875rem;
+    padding-bottom: 1rem;
+  }
+  
 }
